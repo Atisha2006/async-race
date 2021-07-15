@@ -1,0 +1,113 @@
+.winner__list {
+  counter-reset: chapter-count 0;
+}
+.winner-feild {
+  position: relative;
+  display: flex;
+  max-width: 500px;
+  border-bottom: 2px dashed #202020;
+  margin: 0 0 16px;
+  text-align: center;
+  &:before {
+    position: absolute;
+    counter-increment: chapter-count;
+    content: counter(chapter-count);
+    font-weight: 500;
+    padding: 0 20px;
+    color: #fff;
+    text-shadow: -2px 0 2px #000, 2px 0px 2px #000, 0 2px 2px #000, 0 -2px 2px #000;
+  }
+}
+.winner-feild_header {
+  &:before {
+    counter-increment: chapter-count 0;
+    content: '';
+  }
+}
+.winner__number {
+  flex: 0 0 60px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  color: yellow;
+  text-shadow: -2px 0 2px #000, 2px 0px 2px #000, 0 2px 2px #000, 0 -2px 2px #000;
+}
+.winner__car {
+  position: relative;
+  flex: 0 0 50px;
+  width: 50px;
+  height: 30px;
+  margin-left: 10px;
+  -webkit-mask-image: url(../../assets/car.svg);
+  mask-image: url(../../assets/car.svg);
+  mask-size: contain;
+  background-color: #777777;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 30px;
+    background-image: url(../../assets/carback.svg);
+    background-size: contain;
+    opacity: 0.7;
+  }
+}
+.winner-feild_header {
+  & .winner__car {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+    color: #fff;
+    text-shadow: -2px 0 2px #000, 2px 0px 2px #000, 0 2px 2px #000, 0 -2px 2px #000;
+    mask-image: none;
+    -webkit-mask-image: none;
+    background-color: transparent;
+    &:before {
+      content: none;
+      display: none;
+    }
+  }
+  & div {
+    color: #fff;
+  }
+  & .winner__wins,
+  & .winner__time {
+    cursor: pointer;
+    &.desc:after {
+      content: '↑';
+      color: yellow;
+    }
+    &.asc:after {
+      content: '↓';
+      color: yellow;
+    }
+  }
+}
+.winner__name {
+  flex: 0 0 180px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  padding: 0 20px;
+  color: yellow;
+  text-shadow: -2px 0 2px #000, 2px 0px 2px #000, 0 2px 2px #000, 0 -2px 2px #000;
+}
+.winner__wins {
+  flex: 0 0 80px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  padding: 0 10px;
+  color: yellow;
+  text-shadow: -2px 0 2px #000, 2px 0px 2px #000, 0 2px 2px #000, 0 -2px 2px #000;
+}
+.winner__time {
+  flex: 0 0 100px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  padding: 0 10px;
+  color: yellow;
+  text-shadow: -2px 0 2px #000, 2px 0px 2px #000, 0 2px 2px #000, 0 -2px 2px #000;
+}

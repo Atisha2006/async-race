@@ -1,0 +1,47 @@
+.garage-panel {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  margin-bottom: 20px;
+}
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin: 0 0 10px;
+}
+.input {
+  margin-right: 20px;
+  padding: 2px 15px;
+  width: 200px;
+  height: 18px;
+  font-size: 13px;
+  line-height: 14px;
+  color: #202020;
+  font-weight: 400;
+  border-radius: 3px;
+  background-color: #fafdcd;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.9);
+  outline: none;
+  border: none;
+  &_color {
+    width: 60px;
+    padding: 2px;
+    cursor: pointer;
+    &::-webkit-color-swatch-wrapper {
+      padding: 0;
+    }
+    &::-webkit-color-swatch {
+      border: none;
+    }
+  }
+}
+.race-control {
+  .btn {
+    margin-right: 20px;
+  }
+  .btn:last-child {
+    width: 160px;
+    margin-right: 0;
+  }
+}
